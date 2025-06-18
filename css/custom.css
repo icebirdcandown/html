@@ -1,0 +1,94 @@
+/* google font連結(important要擺第一個) */
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@300&display=swap');
+
+
+:root,
+[data-bs-theme=light]{
+   --bs-dark-rgb: 153, 102, 51;}
+
+   /* 整頁文字大小設定 */
+html {
+  font-size: 20px;
+}
+/* 頁尾的字取消底線 */
+footer a {text-decoration: none;}
+/* h2變大2rem */
+h2{font-size:2rem;font-weight: 900;}
+/* 賦予字體屬性 */
+.custom-Brown{color: rgb(73, 28, 0);}
+/* google font */
+
+/* body的背景色跟字型設定 */
+body {
+  background-color: rgba(135, 85, 67, 0.301);
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+ul.a {
+  list-style-type: circle;
+}
+/* 加強cardbody的文字間距 */
+.card-body {
+  line-height: 1.8;
+  padding: 1rem 1.25rem;
+}
+.text-small {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+/* 移除背景白色 */
+.card-custom {
+  background-color: transparent;
+  border: none; /* 可選，加這行是拿掉邊框 */
+}
+/* 點text加上顏色的文字意涵會比直接上顏色來得好 */
+.text-brown{color:brown}
+/* 按鈕顯眼 */
+.btn {
+  letter-spacing: 0.05em;
+}
+
+/*圖片互動 */
+/* 保證圖片 hover 放大後仍維持圓形邊界 */
+.img-container {
+  overflow: hidden;
+  border-radius: 999px; 
+}
+
+/* 放大效果 */
+.zoom-img {
+  transition: transform 0.4s ease;
+}
+.img-container:hover .zoom-img {
+  transform: scale(1.08);
+}
+
+/* 變暗遮罩層 */
+.img-container::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; bottom:0; left:0; right:0 */
+  background-color: rgba(0, 0, 0, 0); /* 預設透明 */
+  transition: background-color 0.3s ease;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+/* hover 時變暗 */
+.img-container:hover::after {
+  background-color: rgba(0, 0, 0, 0.35); /* 遮罩黑色 35% 透明 */
+}
+/* 遮罩之後滑鼠無視遮罩點擊超連結 */
+.overlay {
+  pointer-events: none;
+}
+/* 自訂icon */
+.section {
+  font-size: 36px !important;
+  vertical-align: middle;
+}
+/* 設定id去改變整串的h4 */
+#noted h4 {
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
